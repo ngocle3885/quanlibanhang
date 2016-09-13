@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.KhachHang" table="khach_hang"/>
+  <class name="com.nhom28.quanlibanhang.pojo.KhachHang" table="khach_hang" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tenKhachHang" type="string">
+            <column name="ten_khach_hang" length="30" />
+        </property>
+        <property name="ngaySinh" type="date">
+            <column name="ngay_sinh"/>
+        </property>
+        <property name="diaChi" type="string">
+            <column name="dia_chi" length="30" />
+        </property>
+        <property name="dienThoai" type="string">
+            <column name="dien_thoai" length="30"/>
+        </property>
+        <property name="cmnd" type="string">
+            <column name="cmnd" length="12"/>
+        </property>
+        <property name="gioiTinh" type="java.lang.Integer">
+            <column name="gioi_tinh" />
+        </property>
+        <property name="ngayBatDau" type="date">
+            <column name="ngay_bat_dau" />
+        </property>
+        <property name="ngayGiaoDichGanNhat" type="date">
+            <column name="ngay_giao_dich_gan_nhat" />
+        </property>
+        <property name="idKhuVuc" type="java.lang.Integer">
+            <column name="id_khu_vuc"/>
+        </property>
+        <property name="thongTinLienQuan" type="string">
+            <column name="thong_tin_lien_quan" length="30" />
+        </property>       
+    </class>
 </hibernate-mapping>

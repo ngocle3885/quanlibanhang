@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.NhomHang" table="nhom_hang"/>
+  <class name="com.nhom28.quanlibanhang.pojo.NhomHang" table="nhom_hang" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tenNhomHang" type="string">
+            <column name="ten_nhom_hang" length="30" />
+        </property>                      
+    </class>
 </hibernate-mapping>

@@ -14,6 +14,9 @@ public class App
         
 
         session.getTransaction().commit();
+        System.out.println("-------------------------------------------------");
+        System.out.println("Run Hibernate successful");
+        
         
         
     }

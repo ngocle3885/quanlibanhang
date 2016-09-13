@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.HangHoa" table="hang_hoa"/>
+<hibernate-mapping>  
+  <class name="com.nhom28.quanlibanhang.pojo.HangHoa" table="hang_hoa" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="idLoaiHangHoa" type="java.lang.Integer">
+            <column name="id_loai_hang_hoa" unique="true" />
+        </property>
+        <property name="idNhomHang" type="java.lang.Integer">
+            <column name="id_nhom_hang" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="giaNhap" type="java.lang.Integer">
+            <column name="gia_nhap" />
+        </property>
+        <property name="giaBan" type="java.lang.Integer">
+            <column name="gia_ban" />
+        </property>
+        <property name="maVach" type="string">
+            <column name="ma_vach" length="10"/>
+        </property>
+        <property name="soLuongTon" type="java.lang.Integer">
+            <column name="so_luong_ton" />
+        </property>
+        <property name="tenHangHoa" type="string">
+            <column name="ten_hang_hoa" length="30"/>
+        </property>
+        <property name="thongTinNhaSanXuat" type="string">
+            <column name="thong_tin_nha_san_xuat" length="30"/>
+        </property>
+        <property name="idNhaPhanPhoi" type="java.lang.Integer">
+            <column name="id_nha_phan_phoi"/>
+        </property>
+        <property name="idKho" type="java.lang.Integer">
+            <column name="id_kho"/>
+        </property>
+        <property name="ngayNhap" type="date">
+            <column name="ngay_nhap"/>
+        </property>
+                 
+    </class>
 </hibernate-mapping>

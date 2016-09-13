@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.NguoiDung" table="nguoi_dung"/>
+  <class name="com.nhom28.quanlibanhang.pojo.NguoiDung" table="nguoi_dung" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="taiKhoan" type="string">
+            <column name="tai_khoan" length="30" />
+        </property>
+        <property name="passWord" type="string">
+            <column name="pass_word" length="30"/>
+        </property>
+        <property name="ngayTaoTaiKhoan" type="date">
+            <column name="ngay_tao_tai_khoan" />
+        </property>
+        <property name="ngayTruyCapGanNhat" type="date">
+            <column name="ngay_truy_cap_gan_nhat" />
+        </property>
+         <property name="idPhanQuyen" type="java.lang.Integer">
+            <column name="id_phan_quyen" />
+        </property>                 
+    </class>
 </hibernate-mapping>

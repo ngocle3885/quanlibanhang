@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.NhaPhanPhoi" table="nha_phan_phoi"/>
+  <class name="com.nhom28.quanlibanhang.pojo.NhaPhanPhoi" table="nha_phan_phoi" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tenNhaPhanPhoi" type="string">
+            <column name="ten_nha_phan_phoi" length="30" />
+        </property>
+        <property name="ngayKyHopDong" type="date">
+            <column name="ngay_ky_hop_dong"/>
+        </property>
+        <property name="diaChi" type="string">
+            <column name="dia_chi" length="30" />
+        </property>
+        <property name="dienThoai" type="string">
+            <column name="dien_thoai" length="30" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="ngayGiaoDichGanNhat" type="date">
+            <column name="ngay_giao_dich_gan_nhat" />
+        </property>
+        <property name="idKhuVuc" type="java.lang.Integer">
+            <column name="id_khu_vuc" />
+        </property>
+        <property name="chietKhau" type="java.lang.Integer">
+            <column name="chiet_khau" />
+        </property>
+        <property name="thongTinLienQuan" type="string">
+            <column name="thong_tin_lien_quan" />
+        </property>                   
+    </class>
 </hibernate-mapping>

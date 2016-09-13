@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.LoaiHangHoa" table="loai_hang_hoa"/>
+  <class name="com.nhom28.quanlibanhang.pojo.Kho" table="loai_hang_hoa" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tenLoaiHang" type="string">
+            <column name="ten_loai_hang" length="30" />
+        </property>
+        <property name="donViTinh" type="string">
+            <column name="don_vi_tinh" length="30"/>
+        </property>                  
+    </class>
 </hibernate-mapping>

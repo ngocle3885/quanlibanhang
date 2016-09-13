@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.LichSuBanHang" table="lich_su_ban_hang"/>
+<hibernate-mapping>  
+  <class name="com.nhom28.quanlibanhang.pojo.LichSuBanHang" table="lich_su_ban_hang" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="idHoaDon" type="java.lang.Integer">
+            <column name="id_hoa_don" />
+        </property>
+        <property name="idHangHoa" type="java.lang.Integer">
+            <column name="id_hang_hoa"/>
+        </property>
+        <property name="thaoTac" type="string">
+            <column name="thao_tac" length="30" />
+        </property>              
+    </class>
 </hibernate-mapping>

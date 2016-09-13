@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.KhuVuc" table="khu_vuc"/>
+  <class name="com.nhom28.quanlibanhang.pojo.KhuVuc" table="khu_vuc" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tenKhuVuc" type="string">
+            <column name="ten_khu_vuc" length="30" />
+        </property>
+        <property name="idNguoiQuanLy" type="java.lang.Integer">
+            <column name="id_nguoi_quan_ly"/>
+        </property>                    
+    </class>
 </hibernate-mapping>

@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="com.nhom28.quanlibanhang.pojo.HoaDon" table="hoa_don"/>
+  <class name="com.nhom28.quanlibanhang.pojo.HoaDon" table="hoa_don" catalog="quanlibanhang">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="idHangHoa" type="java.lang.Integer">
+            <column name="id_hang_hoa" unique="true" />
+        </property>
+        <property name="idKhachHang" type="java.lang.Integer">
+            <column name="id_khach_hang"  />
+        </property>
+        <property name="giaBan" type="java.lang.Integer">
+            <column name="gia_ban" />
+        </property>
+        <property name="khuyenMai" type="java.lang.Integer">
+            <column name="khuyen_mai" />
+        </property>
+        <property name="soLuong" type="java.lang.Integer">
+            <column name="so_luong"/>
+        </property>
+        <property name="thanhTien" type="java.lang.Integer">
+            <column name="thanh_tien" />
+        </property>
+        <property name="thongTinGiaoHang" type="string">
+            <column name="thong_tin_giao_hang" length="30"/>
+        </property>
+        <property name="ngayLapHoaDon" type="date">
+            <column name="ngay_lap_hoa_don" />
+        </property>
+        
+                 
+    </class>
 </hibernate-mapping>
